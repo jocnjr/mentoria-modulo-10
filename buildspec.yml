@@ -1,0 +1,16 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo "Installing dependencies"
+      - npm install
+  build:
+    commands:
+      - echo "Build initiated at `date`"
+      - npm run build
+  post_build:
+    commands:
+      - echo "Build done at `date`"
+artifacts:
+  files:
+    - build/**/*
